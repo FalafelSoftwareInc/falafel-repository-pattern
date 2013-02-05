@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="df479debd4a640d994f13b4e37b395d2" Name="Diagram1">
+        <EntityTypeShape EntityType="MvcWebApp.Models.Audience" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcWebApp.Models.Conference" Width="1.5" PointX="0.75" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcWebApp.Models.Level" Width="1.5" PointX="3" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcWebApp.Models.Location" Width="1.5" PointX="3" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcWebApp.Models.Resource" Width="1.5" PointX="7.5" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcWebApp.Models.Session" Width="1.5" PointX="5.25" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcWebApp.Models.SessionType" Width="1.5" PointX="3" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcWebApp.Models.Speaker" Width="1.5" PointX="10.5" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcWebApp.Models.Sponsor" Width="1.5" PointX="8.25" PointY="28" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcWebApp.Models.SponsorshipLevel" Width="1.5" PointX="3" PointY="33.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcWebApp.Models.Tag" Width="1.5" PointX="7.5" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcWebApp.Models.TimeSlot" Width="1.5" PointX="3" PointY="37.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcWebApp.Models.Track" Width="1.5" PointX="10.5" PointY="29.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcWebApp.Models.Vendor" Width="1.5" PointX="3" PointY="41.5" IsExpanded="true" />
+        <AssociationConnector Association="MvcWebApp.Models.FK_Audiences_Conferences" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.FK_Levels_Conferences" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.FK_Locations_Conferences" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.FK_Resources_Conferences" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.FK_Sessions_Conferences" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.FK_SessionTypes_Conferences" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.FK_Speakers_Conferences" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.FK_Sponsors_Conferences" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.FK_SponsorshipLevels_Conferences" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.FK_Tags_Conferences" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.FK_TimeSlots_Conferences" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.FK_Tracks_Conferences" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.FK_Vendors_Conferences" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.FK_Sessions_Levels" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.FK_Sessions_Locations" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.FK_Resources_Sessions" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.FK_Sessions_SessionTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.FK_Sessions_TimeSlots" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.FK_Sponsors_SponsorshipLevels" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.SessionAudiences" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.SessionSpeakers" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.SessionTags" ManuallyRouted="false" />
+        <AssociationConnector Association="MvcWebApp.Models.SessionTracks" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

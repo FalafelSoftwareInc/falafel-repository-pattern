@@ -1,0 +1,1710 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MvcWebApp.Models.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="MvcWebAppModelsStoreContainer">
+          <EntitySet Name="Audiences" EntityType="MvcWebApp.Models.Store.Audiences" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Conferences" EntityType="MvcWebApp.Models.Store.Conferences" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Levels" EntityType="MvcWebApp.Models.Store.Levels" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Locations" EntityType="MvcWebApp.Models.Store.Locations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Resources" EntityType="MvcWebApp.Models.Store.Resources" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SessionAudiences" EntityType="MvcWebApp.Models.Store.SessionAudiences" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Sessions" EntityType="MvcWebApp.Models.Store.Sessions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SessionSpeakers" EntityType="MvcWebApp.Models.Store.SessionSpeakers" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SessionTags" EntityType="MvcWebApp.Models.Store.SessionTags" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SessionTracks" EntityType="MvcWebApp.Models.Store.SessionTracks" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SessionTypes" EntityType="MvcWebApp.Models.Store.SessionTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Speakers" EntityType="MvcWebApp.Models.Store.Speakers" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Sponsors" EntityType="MvcWebApp.Models.Store.Sponsors" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SponsorshipLevels" EntityType="MvcWebApp.Models.Store.SponsorshipLevels" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tags" EntityType="MvcWebApp.Models.Store.Tags" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TimeSlots" EntityType="MvcWebApp.Models.Store.TimeSlots" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tracks" EntityType="MvcWebApp.Models.Store.Tracks" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Vendors" EntityType="MvcWebApp.Models.Store.Vendors" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Audiences_Conferences" Association="MvcWebApp.Models.Store.FK_Audiences_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="Audiences" EntitySet="Audiences" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Levels_Conferences" Association="MvcWebApp.Models.Store.FK_Levels_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="Levels" EntitySet="Levels" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Locations_Conferences" Association="MvcWebApp.Models.Store.FK_Locations_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="Locations" EntitySet="Locations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Resources_Conferences" Association="MvcWebApp.Models.Store.FK_Resources_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="Resources" EntitySet="Resources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Resources_Sessions" Association="MvcWebApp.Models.Store.FK_Resources_Sessions">
+            <End Role="Sessions" EntitySet="Sessions" />
+            <End Role="Resources" EntitySet="Resources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SessionAudiences_Audiences" Association="MvcWebApp.Models.Store.FK_SessionAudiences_Audiences">
+            <End Role="Audiences" EntitySet="Audiences" />
+            <End Role="SessionAudiences" EntitySet="SessionAudiences" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SessionAudiences_Sessions" Association="MvcWebApp.Models.Store.FK_SessionAudiences_Sessions">
+            <End Role="Sessions" EntitySet="Sessions" />
+            <End Role="SessionAudiences" EntitySet="SessionAudiences" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sessions_Conferences" Association="MvcWebApp.Models.Store.FK_Sessions_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="Sessions" EntitySet="Sessions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sessions_Levels" Association="MvcWebApp.Models.Store.FK_Sessions_Levels">
+            <End Role="Levels" EntitySet="Levels" />
+            <End Role="Sessions" EntitySet="Sessions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sessions_Locations" Association="MvcWebApp.Models.Store.FK_Sessions_Locations">
+            <End Role="Locations" EntitySet="Locations" />
+            <End Role="Sessions" EntitySet="Sessions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sessions_SessionTypes" Association="MvcWebApp.Models.Store.FK_Sessions_SessionTypes">
+            <End Role="SessionTypes" EntitySet="SessionTypes" />
+            <End Role="Sessions" EntitySet="Sessions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sessions_TimeSlots" Association="MvcWebApp.Models.Store.FK_Sessions_TimeSlots">
+            <End Role="TimeSlots" EntitySet="TimeSlots" />
+            <End Role="Sessions" EntitySet="Sessions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SessionSpeakers_Sessions" Association="MvcWebApp.Models.Store.FK_SessionSpeakers_Sessions">
+            <End Role="Sessions" EntitySet="Sessions" />
+            <End Role="SessionSpeakers" EntitySet="SessionSpeakers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SessionSpeakers_Speakers" Association="MvcWebApp.Models.Store.FK_SessionSpeakers_Speakers">
+            <End Role="Speakers" EntitySet="Speakers" />
+            <End Role="SessionSpeakers" EntitySet="SessionSpeakers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SessionTags_Sessions" Association="MvcWebApp.Models.Store.FK_SessionTags_Sessions">
+            <End Role="Sessions" EntitySet="Sessions" />
+            <End Role="SessionTags" EntitySet="SessionTags" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SessionTags_Tags" Association="MvcWebApp.Models.Store.FK_SessionTags_Tags">
+            <End Role="Tags" EntitySet="Tags" />
+            <End Role="SessionTags" EntitySet="SessionTags" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SessionTracks_Sessions" Association="MvcWebApp.Models.Store.FK_SessionTracks_Sessions">
+            <End Role="Sessions" EntitySet="Sessions" />
+            <End Role="SessionTracks" EntitySet="SessionTracks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SessionTracks_Tracks" Association="MvcWebApp.Models.Store.FK_SessionTracks_Tracks">
+            <End Role="Tracks" EntitySet="Tracks" />
+            <End Role="SessionTracks" EntitySet="SessionTracks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SessionTypes_Conferences" Association="MvcWebApp.Models.Store.FK_SessionTypes_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="SessionTypes" EntitySet="SessionTypes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Speakers_Conferences" Association="MvcWebApp.Models.Store.FK_Speakers_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="Speakers" EntitySet="Speakers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sponsors_Conferences" Association="MvcWebApp.Models.Store.FK_Sponsors_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="Sponsors" EntitySet="Sponsors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sponsors_SponsorshipLevels" Association="MvcWebApp.Models.Store.FK_Sponsors_SponsorshipLevels">
+            <End Role="SponsorshipLevels" EntitySet="SponsorshipLevels" />
+            <End Role="Sponsors" EntitySet="Sponsors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SponsorshipLevels_Conferences" Association="MvcWebApp.Models.Store.FK_SponsorshipLevels_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="SponsorshipLevels" EntitySet="SponsorshipLevels" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tags_Conferences" Association="MvcWebApp.Models.Store.FK_Tags_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="Tags" EntitySet="Tags" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TimeSlots_Conferences" Association="MvcWebApp.Models.Store.FK_TimeSlots_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="TimeSlots" EntitySet="TimeSlots" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tracks_Conferences" Association="MvcWebApp.Models.Store.FK_Tracks_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="Tracks" EntitySet="Tracks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vendors_Conferences" Association="MvcWebApp.Models.Store.FK_Vendors_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="Vendors" EntitySet="Vendors" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Audiences">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="int" Nullable="false" />
+          <Property Name="UKey" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+          <Property Name="Timestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Conferences">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="StartDate" Type="datetime" Nullable="false" />
+          <Property Name="EndDate" Type="datetime" Nullable="false" />
+          <Property Name="Location" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Published" Type="bit" Nullable="false" />
+          <Property Name="BaseName" Type="varchar" Nullable="false" MaxLength="63" />
+          <Property Name="TimeOffsetMinutes" Type="smallint" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ShortName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="AccentColor" Type="char" Nullable="false" MaxLength="6" />
+          <Property Name="FacebookURL" Type="nvarchar(max)" />
+          <Property Name="WebSiteURL" Type="nvarchar(max)" />
+          <Property Name="LinkedInURL" Type="nvarchar(max)" />
+          <Property Name="RSSURL" Type="nvarchar(max)" />
+          <Property Name="TwitterScreenName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FlickrHandle" Type="nvarchar" MaxLength="50" />
+          <Property Name="Latitude" Type="decimal" Nullable="false" Precision="10" Scale="6" />
+          <Property Name="Longitude" Type="decimal" Nullable="false" Precision="10" Scale="6" />
+          <Property Name="Altitude" Type="decimal" Nullable="false" Precision="10" Scale="6" />
+          <Property Name="LocationFriendly" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="IsWillAttendVisible" Type="bit" Nullable="false" />
+          <Property Name="PrivateLabel" Type="tinyint" Nullable="false" />
+          <Property Name="EnableSessionChangeNotifications" Type="bit" Nullable="false" />
+          <Property Name="IsFavoritesVisible" Type="bit" Nullable="false" />
+          <Property Name="IsRoomVisible" Type="bit" Nullable="false" />
+          <Property Name="IsTimeslotVisible" Type="bit" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+          <Property Name="Timestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Levels">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="int" Nullable="false" />
+          <Property Name="UKey" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Timestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Locations">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="int" Nullable="false" />
+          <Property Name="UKey" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Longitude" Type="decimal" Precision="9" Scale="6" />
+          <Property Name="Latitude" Type="decimal" Precision="9" Scale="6" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+          <Property Name="Capacity" Type="smallint" />
+          <Property Name="Building" Type="nvarchar" MaxLength="100" />
+          <Property Name="Timestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Resources">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="int" Nullable="false" />
+          <Property Name="ResourceType" Type="smallint" Nullable="false" />
+          <Property Name="UKey" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="URL" Type="nvarchar(max)" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+          <Property Name="Timestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="SessionID" Type="int" />
+        </EntityType>
+        <EntityType Name="SessionAudiences">
+          <Key>
+            <PropertyRef Name="SessionID" />
+            <PropertyRef Name="AudienceID" />
+          </Key>
+          <Property Name="SessionID" Type="int" Nullable="false" />
+          <Property Name="AudienceID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sessions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="int" Nullable="false" />
+          <Property Name="UKey" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="TimeSlotID" Type="int" />
+          <Property Name="LocationID" Type="int" />
+          <Property Name="LevelID" Type="int" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+          <Property Name="IsSponsorSession" Type="bit" Nullable="false" />
+          <Property Name="RequiresRegistration" Type="bit" Nullable="false" />
+          <Property Name="RegistrationStartDate" Type="datetime" />
+          <Property Name="Code" Type="nvarchar" MaxLength="30" />
+          <Property Name="SessionTypeID" Type="int" />
+          <Property Name="Timestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="SessionSpeakers">
+          <Key>
+            <PropertyRef Name="SessionID" />
+            <PropertyRef Name="SpeakerID" />
+          </Key>
+          <Property Name="SessionID" Type="int" Nullable="false" />
+          <Property Name="SpeakerID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SessionTags">
+          <Key>
+            <PropertyRef Name="SessionID" />
+            <PropertyRef Name="TagID" />
+          </Key>
+          <Property Name="SessionID" Type="int" Nullable="false" />
+          <Property Name="TagID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SessionTracks">
+          <Key>
+            <PropertyRef Name="SessionID" />
+            <PropertyRef Name="TrackID" />
+          </Key>
+          <Property Name="SessionID" Type="int" Nullable="false" />
+          <Property Name="TrackID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SessionTypes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="int" Nullable="false" />
+          <Property Name="UKey" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+          <Property Name="Timestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Speakers">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="int" Nullable="false" />
+          <Property Name="UKey" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bio" Type="nvarchar(max)" />
+          <Property Name="URL" Type="nvarchar" MaxLength="100" />
+          <Property Name="ImageURL" Type="nvarchar(max)" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="Company" Type="nvarchar" MaxLength="100" />
+          <Property Name="Twitter" Type="nvarchar" MaxLength="100" />
+          <Property Name="Timestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Sponsors">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="int" Nullable="false" />
+          <Property Name="UKey" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="URL" Type="nvarchar" MaxLength="100" />
+          <Property Name="LogoURL" Type="nvarchar" MaxLength="200" />
+          <Property Name="SponsorshipLevelID" Type="int" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+          <Property Name="Twitter" Type="nvarchar" MaxLength="100" />
+          <Property Name="ImageURL" Type="nvarchar(max)" />
+          <Property Name="Category" Type="tinyint" Nullable="false" />
+          <Property Name="Timestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="SponsorshipLevels">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="int" Nullable="false" />
+          <Property Name="UKey" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Rank" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="ImageURL" Type="nvarchar" MaxLength="200" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+          <Property Name="Timestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Tags">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="int" Nullable="false" />
+          <Property Name="UKey" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TimeSlots">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="int" Nullable="false" />
+          <Property Name="UKey" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="StartTime" Type="datetime" />
+          <Property Name="EndTime" Type="datetime" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+          <Property Name="Timestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Tracks">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="int" Nullable="false" />
+          <Property Name="UKey" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+          <Property Name="Timestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Vendors">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="int" Nullable="false" />
+          <Property Name="UKey" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Booth" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="URL" Type="nvarchar" MaxLength="100" />
+          <Property Name="LogoURL" Type="nvarchar" MaxLength="200" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+          <Property Name="Twitter" Type="nvarchar" MaxLength="100" />
+          <Property Name="ImageURL" Type="nvarchar(max)" />
+          <Property Name="Timestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <Association Name="FK_Audiences_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Store.Conferences" Multiplicity="1" />
+          <End Role="Audiences" Type="MvcWebApp.Models.Store.Audiences" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Audiences">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Levels_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Store.Conferences" Multiplicity="1" />
+          <End Role="Levels" Type="MvcWebApp.Models.Store.Levels" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Levels">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Locations_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Store.Conferences" Multiplicity="1" />
+          <End Role="Locations" Type="MvcWebApp.Models.Store.Locations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Locations">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Resources_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Store.Conferences" Multiplicity="1" />
+          <End Role="Resources" Type="MvcWebApp.Models.Store.Resources" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Resources">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Resources_Sessions">
+          <End Role="Sessions" Type="MvcWebApp.Models.Store.Sessions" Multiplicity="0..1" />
+          <End Role="Resources" Type="MvcWebApp.Models.Store.Resources" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sessions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Resources">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SessionAudiences_Audiences">
+          <End Role="Audiences" Type="MvcWebApp.Models.Store.Audiences" Multiplicity="1" />
+          <End Role="SessionAudiences" Type="MvcWebApp.Models.Store.SessionAudiences" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Audiences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SessionAudiences">
+              <PropertyRef Name="AudienceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SessionAudiences_Sessions">
+          <End Role="Sessions" Type="MvcWebApp.Models.Store.Sessions" Multiplicity="1" />
+          <End Role="SessionAudiences" Type="MvcWebApp.Models.Store.SessionAudiences" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sessions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SessionAudiences">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sessions_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Store.Conferences" Multiplicity="1" />
+          <End Role="Sessions" Type="MvcWebApp.Models.Store.Sessions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Sessions">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sessions_Levels">
+          <End Role="Levels" Type="MvcWebApp.Models.Store.Levels" Multiplicity="0..1" />
+          <End Role="Sessions" Type="MvcWebApp.Models.Store.Sessions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Levels">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Sessions">
+              <PropertyRef Name="LevelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sessions_Locations">
+          <End Role="Locations" Type="MvcWebApp.Models.Store.Locations" Multiplicity="0..1" />
+          <End Role="Sessions" Type="MvcWebApp.Models.Store.Sessions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Locations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Sessions">
+              <PropertyRef Name="LocationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sessions_SessionTypes">
+          <End Role="SessionTypes" Type="MvcWebApp.Models.Store.SessionTypes" Multiplicity="0..1" />
+          <End Role="Sessions" Type="MvcWebApp.Models.Store.Sessions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SessionTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Sessions">
+              <PropertyRef Name="SessionTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sessions_TimeSlots">
+          <End Role="TimeSlots" Type="MvcWebApp.Models.Store.TimeSlots" Multiplicity="0..1" />
+          <End Role="Sessions" Type="MvcWebApp.Models.Store.Sessions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TimeSlots">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Sessions">
+              <PropertyRef Name="TimeSlotID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SessionSpeakers_Sessions">
+          <End Role="Sessions" Type="MvcWebApp.Models.Store.Sessions" Multiplicity="1" />
+          <End Role="SessionSpeakers" Type="MvcWebApp.Models.Store.SessionSpeakers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sessions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SessionSpeakers">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SessionSpeakers_Speakers">
+          <End Role="Speakers" Type="MvcWebApp.Models.Store.Speakers" Multiplicity="1" />
+          <End Role="SessionSpeakers" Type="MvcWebApp.Models.Store.SessionSpeakers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Speakers">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SessionSpeakers">
+              <PropertyRef Name="SpeakerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SessionTags_Sessions">
+          <End Role="Sessions" Type="MvcWebApp.Models.Store.Sessions" Multiplicity="1" />
+          <End Role="SessionTags" Type="MvcWebApp.Models.Store.SessionTags" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sessions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SessionTags">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SessionTags_Tags">
+          <End Role="Tags" Type="MvcWebApp.Models.Store.Tags" Multiplicity="1" />
+          <End Role="SessionTags" Type="MvcWebApp.Models.Store.SessionTags" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tags">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SessionTags">
+              <PropertyRef Name="TagID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SessionTracks_Sessions">
+          <End Role="Sessions" Type="MvcWebApp.Models.Store.Sessions" Multiplicity="1" />
+          <End Role="SessionTracks" Type="MvcWebApp.Models.Store.SessionTracks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sessions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SessionTracks">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SessionTracks_Tracks">
+          <End Role="Tracks" Type="MvcWebApp.Models.Store.Tracks" Multiplicity="1" />
+          <End Role="SessionTracks" Type="MvcWebApp.Models.Store.SessionTracks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tracks">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SessionTracks">
+              <PropertyRef Name="TrackID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SessionTypes_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Store.Conferences" Multiplicity="1" />
+          <End Role="SessionTypes" Type="MvcWebApp.Models.Store.SessionTypes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SessionTypes">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Speakers_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Store.Conferences" Multiplicity="1" />
+          <End Role="Speakers" Type="MvcWebApp.Models.Store.Speakers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Speakers">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sponsors_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Store.Conferences" Multiplicity="1" />
+          <End Role="Sponsors" Type="MvcWebApp.Models.Store.Sponsors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Sponsors">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sponsors_SponsorshipLevels">
+          <End Role="SponsorshipLevels" Type="MvcWebApp.Models.Store.SponsorshipLevels" Multiplicity="0..1" />
+          <End Role="Sponsors" Type="MvcWebApp.Models.Store.Sponsors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SponsorshipLevels">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Sponsors">
+              <PropertyRef Name="SponsorshipLevelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SponsorshipLevels_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Store.Conferences" Multiplicity="1" />
+          <End Role="SponsorshipLevels" Type="MvcWebApp.Models.Store.SponsorshipLevels" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SponsorshipLevels">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tags_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Store.Conferences" Multiplicity="1" />
+          <End Role="Tags" Type="MvcWebApp.Models.Store.Tags" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tags">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TimeSlots_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Store.Conferences" Multiplicity="1" />
+          <End Role="TimeSlots" Type="MvcWebApp.Models.Store.TimeSlots" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TimeSlots">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tracks_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Store.Conferences" Multiplicity="1" />
+          <End Role="Tracks" Type="MvcWebApp.Models.Store.Tracks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tracks">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vendors_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Store.Conferences" Multiplicity="1" />
+          <End Role="Vendors" Type="MvcWebApp.Models.Store.Vendors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Vendors">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MvcWebApp.Models" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="EBContext" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Audiences" EntityType="MvcWebApp.Models.Audience" />
+          <EntitySet Name="Conferences" EntityType="MvcWebApp.Models.Conference" />
+          <EntitySet Name="Levels" EntityType="MvcWebApp.Models.Level" />
+          <EntitySet Name="Locations" EntityType="MvcWebApp.Models.Location" />
+          <EntitySet Name="Resources" EntityType="MvcWebApp.Models.Resource" />
+          <EntitySet Name="Sessions" EntityType="MvcWebApp.Models.Session" />
+          <EntitySet Name="SessionTypes" EntityType="MvcWebApp.Models.SessionType" />
+          <EntitySet Name="Speakers" EntityType="MvcWebApp.Models.Speaker" />
+          <EntitySet Name="Sponsors" EntityType="MvcWebApp.Models.Sponsor" />
+          <EntitySet Name="SponsorshipLevels" EntityType="MvcWebApp.Models.SponsorshipLevel" />
+          <EntitySet Name="Tags" EntityType="MvcWebApp.Models.Tag" />
+          <EntitySet Name="TimeSlots" EntityType="MvcWebApp.Models.TimeSlot" />
+          <EntitySet Name="Tracks" EntityType="MvcWebApp.Models.Track" />
+          <EntitySet Name="Vendors" EntityType="MvcWebApp.Models.Vendor" />
+          <AssociationSet Name="FK_Audiences_Conferences" Association="MvcWebApp.Models.FK_Audiences_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="Audiences" EntitySet="Audiences" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Levels_Conferences" Association="MvcWebApp.Models.FK_Levels_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="Levels" EntitySet="Levels" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Locations_Conferences" Association="MvcWebApp.Models.FK_Locations_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="Locations" EntitySet="Locations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Resources_Conferences" Association="MvcWebApp.Models.FK_Resources_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="Resources" EntitySet="Resources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sessions_Conferences" Association="MvcWebApp.Models.FK_Sessions_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="Sessions" EntitySet="Sessions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SessionTypes_Conferences" Association="MvcWebApp.Models.FK_SessionTypes_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="SessionTypes" EntitySet="SessionTypes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Speakers_Conferences" Association="MvcWebApp.Models.FK_Speakers_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="Speakers" EntitySet="Speakers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sponsors_Conferences" Association="MvcWebApp.Models.FK_Sponsors_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="Sponsors" EntitySet="Sponsors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SponsorshipLevels_Conferences" Association="MvcWebApp.Models.FK_SponsorshipLevels_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="SponsorshipLevels" EntitySet="SponsorshipLevels" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tags_Conferences" Association="MvcWebApp.Models.FK_Tags_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="Tags" EntitySet="Tags" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TimeSlots_Conferences" Association="MvcWebApp.Models.FK_TimeSlots_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="TimeSlots" EntitySet="TimeSlots" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tracks_Conferences" Association="MvcWebApp.Models.FK_Tracks_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="Tracks" EntitySet="Tracks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vendors_Conferences" Association="MvcWebApp.Models.FK_Vendors_Conferences">
+            <End Role="Conferences" EntitySet="Conferences" />
+            <End Role="Vendors" EntitySet="Vendors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sessions_Levels" Association="MvcWebApp.Models.FK_Sessions_Levels">
+            <End Role="Levels" EntitySet="Levels" />
+            <End Role="Sessions" EntitySet="Sessions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sessions_Locations" Association="MvcWebApp.Models.FK_Sessions_Locations">
+            <End Role="Locations" EntitySet="Locations" />
+            <End Role="Sessions" EntitySet="Sessions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Resources_Sessions" Association="MvcWebApp.Models.FK_Resources_Sessions">
+            <End Role="Sessions" EntitySet="Sessions" />
+            <End Role="Resources" EntitySet="Resources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sessions_SessionTypes" Association="MvcWebApp.Models.FK_Sessions_SessionTypes">
+            <End Role="SessionTypes" EntitySet="SessionTypes" />
+            <End Role="Sessions" EntitySet="Sessions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sessions_TimeSlots" Association="MvcWebApp.Models.FK_Sessions_TimeSlots">
+            <End Role="TimeSlots" EntitySet="TimeSlots" />
+            <End Role="Sessions" EntitySet="Sessions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sponsors_SponsorshipLevels" Association="MvcWebApp.Models.FK_Sponsors_SponsorshipLevels">
+            <End Role="SponsorshipLevels" EntitySet="SponsorshipLevels" />
+            <End Role="Sponsors" EntitySet="Sponsors" />
+          </AssociationSet>
+          <AssociationSet Name="SessionAudiences" Association="MvcWebApp.Models.SessionAudiences">
+            <End Role="Audiences" EntitySet="Audiences" />
+            <End Role="Sessions" EntitySet="Sessions" />
+          </AssociationSet>
+          <AssociationSet Name="SessionSpeakers" Association="MvcWebApp.Models.SessionSpeakers">
+            <End Role="Sessions" EntitySet="Sessions" />
+            <End Role="Speakers" EntitySet="Speakers" />
+          </AssociationSet>
+          <AssociationSet Name="SessionTags" Association="MvcWebApp.Models.SessionTags">
+            <End Role="Sessions" EntitySet="Sessions" />
+            <End Role="Tags" EntitySet="Tags" />
+          </AssociationSet>
+          <AssociationSet Name="SessionTracks" Association="MvcWebApp.Models.SessionTracks">
+            <End Role="Sessions" EntitySet="Sessions" />
+            <End Role="Tracks" EntitySet="Tracks" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Audience">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="Int32" Nullable="false" />
+          <Property Name="UKey" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Conference" Relationship="MvcWebApp.Models.FK_Audiences_Conferences" FromRole="Audiences" ToRole="Conferences" />
+          <NavigationProperty Name="Sessions" Relationship="MvcWebApp.Models.SessionAudiences" FromRole="Audiences" ToRole="Sessions" a:SetterAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+        </EntityType>
+        <EntityType Name="Conference">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Location" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Published" Type="Boolean" Nullable="false" />
+          <Property Name="BaseName" Type="String" Nullable="false" MaxLength="63" Unicode="false" FixedLength="false" />
+          <Property Name="TimeOffsetMinutes" Type="Int16" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ShortName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AccentColor" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="FacebookURL" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="WebSiteURL" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="LinkedInURL" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="RSSURL" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="TwitterScreenName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FlickrHandle" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Latitude" Type="Decimal" Nullable="false" Precision="10" Scale="6" />
+          <Property Name="Longitude" Type="Decimal" Nullable="false" Precision="10" Scale="6" />
+          <Property Name="Altitude" Type="Decimal" Nullable="false" Precision="10" Scale="6" />
+          <Property Name="LocationFriendly" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="IsWillAttendVisible" Type="Boolean" Nullable="false" />
+          <Property Name="PrivateLabel" Type="Byte" Nullable="false" />
+          <Property Name="EnableSessionChangeNotifications" Type="Boolean" Nullable="false" />
+          <Property Name="IsFavoritesVisible" Type="Boolean" Nullable="false" />
+          <Property Name="IsRoomVisible" Type="Boolean" Nullable="false" />
+          <Property Name="IsTimeslotVisible" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Audiences" Relationship="MvcWebApp.Models.FK_Audiences_Conferences" FromRole="Conferences" ToRole="Audiences" />
+          <NavigationProperty Name="Levels" Relationship="MvcWebApp.Models.FK_Levels_Conferences" FromRole="Conferences" ToRole="Levels" />
+          <NavigationProperty Name="Locations" Relationship="MvcWebApp.Models.FK_Locations_Conferences" FromRole="Conferences" ToRole="Locations" />
+          <NavigationProperty Name="Resources" Relationship="MvcWebApp.Models.FK_Resources_Conferences" FromRole="Conferences" ToRole="Resources" />
+          <NavigationProperty Name="Sessions" Relationship="MvcWebApp.Models.FK_Sessions_Conferences" FromRole="Conferences" ToRole="Sessions" />
+          <NavigationProperty Name="SessionTypes" Relationship="MvcWebApp.Models.FK_SessionTypes_Conferences" FromRole="Conferences" ToRole="SessionTypes" />
+          <NavigationProperty Name="Speakers" Relationship="MvcWebApp.Models.FK_Speakers_Conferences" FromRole="Conferences" ToRole="Speakers" />
+          <NavigationProperty Name="Sponsors" Relationship="MvcWebApp.Models.FK_Sponsors_Conferences" FromRole="Conferences" ToRole="Sponsors" />
+          <NavigationProperty Name="SponsorshipLevels" Relationship="MvcWebApp.Models.FK_SponsorshipLevels_Conferences" FromRole="Conferences" ToRole="SponsorshipLevels" />
+          <NavigationProperty Name="Tags" Relationship="MvcWebApp.Models.FK_Tags_Conferences" FromRole="Conferences" ToRole="Tags" />
+          <NavigationProperty Name="TimeSlots" Relationship="MvcWebApp.Models.FK_TimeSlots_Conferences" FromRole="Conferences" ToRole="TimeSlots" />
+          <NavigationProperty Name="Tracks" Relationship="MvcWebApp.Models.FK_Tracks_Conferences" FromRole="Conferences" ToRole="Tracks" />
+          <NavigationProperty Name="Vendors" Relationship="MvcWebApp.Models.FK_Vendors_Conferences" FromRole="Conferences" ToRole="Vendors" />
+        </EntityType>
+        <EntityType Name="Level">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="Int32" Nullable="false" />
+          <Property Name="UKey" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Conference" Relationship="MvcWebApp.Models.FK_Levels_Conferences" FromRole="Levels" ToRole="Conferences" />
+          <NavigationProperty Name="Sessions" Relationship="MvcWebApp.Models.FK_Sessions_Levels" FromRole="Levels" ToRole="Sessions" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+        </EntityType>
+        <EntityType Name="Location">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="Int32" Nullable="false" />
+          <Property Name="UKey" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Longitude" Type="Decimal" Precision="9" Scale="6" />
+          <Property Name="Latitude" Type="Decimal" Precision="9" Scale="6" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Capacity" Type="Int16" />
+          <Property Name="Building" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Conference" Relationship="MvcWebApp.Models.FK_Locations_Conferences" FromRole="Locations" ToRole="Conferences" />
+          <NavigationProperty Name="Sessions" Relationship="MvcWebApp.Models.FK_Sessions_Locations" FromRole="Locations" ToRole="Sessions" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+        </EntityType>
+        <EntityType Name="Resource">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="Int32" Nullable="false" />
+          <Property Name="ResourceType" Type="Int16" Nullable="false" />
+          <Property Name="UKey" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="URL" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" ConcurrencyMode="Fixed" />
+          <Property Name="SessionID" Type="Int32" />
+          <NavigationProperty Name="Conference" Relationship="MvcWebApp.Models.FK_Resources_Conferences" FromRole="Resources" ToRole="Conferences" />
+          <NavigationProperty Name="Session" Relationship="MvcWebApp.Models.FK_Resources_Sessions" FromRole="Resources" ToRole="Sessions" />
+        </EntityType>
+        <EntityType Name="Session">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="Int32" Nullable="false" />
+          <Property Name="UKey" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="TimeSlotID" Type="Int32" />
+          <Property Name="LocationID" Type="Int32" />
+          <Property Name="LevelID" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsSponsorSession" Type="Boolean" Nullable="false" />
+          <Property Name="RequiresRegistration" Type="Boolean" Nullable="false" />
+          <Property Name="RegistrationStartDate" Type="DateTime" Precision="3" />
+          <Property Name="Code" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="SessionTypeID" Type="Int32" />
+          <Property Name="Timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Conference" Relationship="MvcWebApp.Models.FK_Sessions_Conferences" FromRole="Sessions" ToRole="Conferences" />
+          <NavigationProperty Name="Level" Relationship="MvcWebApp.Models.FK_Sessions_Levels" FromRole="Sessions" ToRole="Levels" />
+          <NavigationProperty Name="Location" Relationship="MvcWebApp.Models.FK_Sessions_Locations" FromRole="Sessions" ToRole="Locations" />
+          <NavigationProperty Name="Resources" Relationship="MvcWebApp.Models.FK_Resources_Sessions" FromRole="Sessions" ToRole="Resources" />
+          <NavigationProperty Name="SessionType" Relationship="MvcWebApp.Models.FK_Sessions_SessionTypes" FromRole="Sessions" ToRole="SessionTypes" />
+          <NavigationProperty Name="TimeSlot" Relationship="MvcWebApp.Models.FK_Sessions_TimeSlots" FromRole="Sessions" ToRole="TimeSlots" />
+          <NavigationProperty Name="Audiences" Relationship="MvcWebApp.Models.SessionAudiences" FromRole="Sessions" ToRole="Audiences" />
+          <NavigationProperty Name="Speakers" Relationship="MvcWebApp.Models.SessionSpeakers" FromRole="Sessions" ToRole="Speakers" />
+          <NavigationProperty Name="Tags" Relationship="MvcWebApp.Models.SessionTags" FromRole="Sessions" ToRole="Tags" />
+          <NavigationProperty Name="Tracks" Relationship="MvcWebApp.Models.SessionTracks" FromRole="Sessions" ToRole="Tracks" />
+        </EntityType>
+        <EntityType Name="SessionType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="Int32" Nullable="false" />
+          <Property Name="UKey" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Conference" Relationship="MvcWebApp.Models.FK_SessionTypes_Conferences" FromRole="SessionTypes" ToRole="Conferences" />
+          <NavigationProperty Name="Sessions" Relationship="MvcWebApp.Models.FK_Sessions_SessionTypes" FromRole="SessionTypes" ToRole="Sessions" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+        </EntityType>
+        <EntityType Name="Speaker">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="Int32" Nullable="false" />
+          <Property Name="UKey" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Bio" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="URL" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ImageURL" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Title" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Company" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Twitter" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Conference" Relationship="MvcWebApp.Models.FK_Speakers_Conferences" FromRole="Speakers" ToRole="Conferences" />
+          <NavigationProperty Name="Sessions" Relationship="MvcWebApp.Models.SessionSpeakers" FromRole="Speakers" ToRole="Sessions" />
+        </EntityType>
+        <EntityType Name="Sponsor">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="Int32" Nullable="false" />
+          <Property Name="UKey" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="URL" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="LogoURL" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="SponsorshipLevelID" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Twitter" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ImageURL" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Category" Type="Byte" Nullable="false" />
+          <Property Name="Timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Conference" Relationship="MvcWebApp.Models.FK_Sponsors_Conferences" FromRole="Sponsors" ToRole="Conferences" />
+          <NavigationProperty Name="SponsorshipLevel" Relationship="MvcWebApp.Models.FK_Sponsors_SponsorshipLevels" FromRole="Sponsors" ToRole="SponsorshipLevels" />
+        </EntityType>
+        <EntityType Name="SponsorshipLevel">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="Int32" Nullable="false" />
+          <Property Name="UKey" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Rank" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ImageURL" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Conference" Relationship="MvcWebApp.Models.FK_SponsorshipLevels_Conferences" FromRole="SponsorshipLevels" ToRole="Conferences" />
+          <NavigationProperty Name="Sponsors" Relationship="MvcWebApp.Models.FK_Sponsors_SponsorshipLevels" FromRole="SponsorshipLevels" ToRole="Sponsors" />
+        </EntityType>
+        <EntityType Name="Tag">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="Int32" Nullable="false" />
+          <Property Name="UKey" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Conference" Relationship="MvcWebApp.Models.FK_Tags_Conferences" FromRole="Tags" ToRole="Conferences" />
+          <NavigationProperty Name="Sessions" Relationship="MvcWebApp.Models.SessionTags" FromRole="Tags" ToRole="Sessions" a:SetterAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+        </EntityType>
+        <EntityType Name="TimeSlot">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="Int32" Nullable="false" />
+          <Property Name="UKey" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="StartTime" Type="DateTime" Precision="3" />
+          <Property Name="EndTime" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Conference" Relationship="MvcWebApp.Models.FK_TimeSlots_Conferences" FromRole="TimeSlots" ToRole="Conferences" />
+          <NavigationProperty Name="Sessions" Relationship="MvcWebApp.Models.FK_Sessions_TimeSlots" FromRole="TimeSlots" ToRole="Sessions" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+        </EntityType>
+        <EntityType Name="Track">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="Int32" Nullable="false" />
+          <Property Name="UKey" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Conference" Relationship="MvcWebApp.Models.FK_Tracks_Conferences" FromRole="Tracks" ToRole="Conferences" />
+          <NavigationProperty Name="Sessions" Relationship="MvcWebApp.Models.SessionTracks" FromRole="Tracks" ToRole="Sessions" />
+        </EntityType>
+        <EntityType Name="Vendor">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ConferenceID" Type="Int32" Nullable="false" />
+          <Property Name="UKey" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Booth" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="URL" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="LogoURL" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Twitter" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ImageURL" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="Conference" Relationship="MvcWebApp.Models.FK_Vendors_Conferences" FromRole="Vendors" ToRole="Conferences" />
+        </EntityType>
+        <Association Name="FK_Audiences_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Conference" Multiplicity="1" />
+          <End Role="Audiences" Type="MvcWebApp.Models.Audience" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Audiences">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Levels_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Conference" Multiplicity="1" />
+          <End Role="Levels" Type="MvcWebApp.Models.Level" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Levels">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Locations_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Conference" Multiplicity="1" />
+          <End Role="Locations" Type="MvcWebApp.Models.Location" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Locations">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Resources_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Conference" Multiplicity="1" />
+          <End Role="Resources" Type="MvcWebApp.Models.Resource" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Resources">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sessions_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Conference" Multiplicity="1" />
+          <End Role="Sessions" Type="MvcWebApp.Models.Session" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Sessions">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SessionTypes_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Conference" Multiplicity="1" />
+          <End Role="SessionTypes" Type="MvcWebApp.Models.SessionType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SessionTypes">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Speakers_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Conference" Multiplicity="1" />
+          <End Role="Speakers" Type="MvcWebApp.Models.Speaker" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Speakers">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sponsors_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Conference" Multiplicity="1" />
+          <End Role="Sponsors" Type="MvcWebApp.Models.Sponsor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Sponsors">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SponsorshipLevels_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Conference" Multiplicity="1" />
+          <End Role="SponsorshipLevels" Type="MvcWebApp.Models.SponsorshipLevel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SponsorshipLevels">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tags_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Conference" Multiplicity="1" />
+          <End Role="Tags" Type="MvcWebApp.Models.Tag" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tags">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TimeSlots_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Conference" Multiplicity="1" />
+          <End Role="TimeSlots" Type="MvcWebApp.Models.TimeSlot" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TimeSlots">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tracks_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Conference" Multiplicity="1" />
+          <End Role="Tracks" Type="MvcWebApp.Models.Track" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tracks">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vendors_Conferences">
+          <End Role="Conferences" Type="MvcWebApp.Models.Conference" Multiplicity="1" />
+          <End Role="Vendors" Type="MvcWebApp.Models.Vendor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conferences">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Vendors">
+              <PropertyRef Name="ConferenceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sessions_Levels">
+          <End Role="Levels" Type="MvcWebApp.Models.Level" Multiplicity="0..1" />
+          <End Role="Sessions" Type="MvcWebApp.Models.Session" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Levels">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Sessions">
+              <PropertyRef Name="LevelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sessions_Locations">
+          <End Role="Locations" Type="MvcWebApp.Models.Location" Multiplicity="0..1" />
+          <End Role="Sessions" Type="MvcWebApp.Models.Session" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Locations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Sessions">
+              <PropertyRef Name="LocationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Resources_Sessions">
+          <End Role="Sessions" Type="MvcWebApp.Models.Session" Multiplicity="0..1" />
+          <End Role="Resources" Type="MvcWebApp.Models.Resource" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sessions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Resources">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sessions_SessionTypes">
+          <End Role="SessionTypes" Type="MvcWebApp.Models.SessionType" Multiplicity="0..1" />
+          <End Role="Sessions" Type="MvcWebApp.Models.Session" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SessionTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Sessions">
+              <PropertyRef Name="SessionTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sessions_TimeSlots">
+          <End Role="TimeSlots" Type="MvcWebApp.Models.TimeSlot" Multiplicity="0..1" />
+          <End Role="Sessions" Type="MvcWebApp.Models.Session" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TimeSlots">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Sessions">
+              <PropertyRef Name="TimeSlotID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sponsors_SponsorshipLevels">
+          <End Role="SponsorshipLevels" Type="MvcWebApp.Models.SponsorshipLevel" Multiplicity="0..1" />
+          <End Role="Sponsors" Type="MvcWebApp.Models.Sponsor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SponsorshipLevels">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Sponsors">
+              <PropertyRef Name="SponsorshipLevelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SessionAudiences">
+          <End Role="Audiences" Type="MvcWebApp.Models.Audience" Multiplicity="*" />
+          <End Role="Sessions" Type="MvcWebApp.Models.Session" Multiplicity="*" />
+        </Association>
+        <Association Name="SessionSpeakers">
+          <End Role="Sessions" Type="MvcWebApp.Models.Session" Multiplicity="*" />
+          <End Role="Speakers" Type="MvcWebApp.Models.Speaker" Multiplicity="*" />
+        </Association>
+        <Association Name="SessionTags">
+          <End Role="Sessions" Type="MvcWebApp.Models.Session" Multiplicity="*" />
+          <End Role="Tags" Type="MvcWebApp.Models.Tag" Multiplicity="*" />
+        </Association>
+        <Association Name="SessionTracks">
+          <End Role="Sessions" Type="MvcWebApp.Models.Session" Multiplicity="*" />
+          <End Role="Tracks" Type="MvcWebApp.Models.Track" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MvcWebAppModelsStoreContainer" CdmEntityContainer="EBContext">
+          <EntitySetMapping Name="Audiences">
+            <EntityTypeMapping TypeName="MvcWebApp.Models.Audience">
+              <MappingFragment StoreEntitySet="Audiences">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ConferenceID" ColumnName="ConferenceID" />
+                <ScalarProperty Name="UKey" ColumnName="UKey" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Conferences">
+            <EntityTypeMapping TypeName="MvcWebApp.Models.Conference">
+              <MappingFragment StoreEntitySet="Conferences">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Published" ColumnName="Published" />
+                <ScalarProperty Name="BaseName" ColumnName="BaseName" />
+                <ScalarProperty Name="TimeOffsetMinutes" ColumnName="TimeOffsetMinutes" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+                <ScalarProperty Name="AccentColor" ColumnName="AccentColor" />
+                <ScalarProperty Name="FacebookURL" ColumnName="FacebookURL" />
+                <ScalarProperty Name="WebSiteURL" ColumnName="WebSiteURL" />
+                <ScalarProperty Name="LinkedInURL" ColumnName="LinkedInURL" />
+                <ScalarProperty Name="RSSURL" ColumnName="RSSURL" />
+                <ScalarProperty Name="TwitterScreenName" ColumnName="TwitterScreenName" />
+                <ScalarProperty Name="FlickrHandle" ColumnName="FlickrHandle" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Altitude" ColumnName="Altitude" />
+                <ScalarProperty Name="LocationFriendly" ColumnName="LocationFriendly" />
+                <ScalarProperty Name="IsWillAttendVisible" ColumnName="IsWillAttendVisible" />
+                <ScalarProperty Name="PrivateLabel" ColumnName="PrivateLabel" />
+                <ScalarProperty Name="EnableSessionChangeNotifications" ColumnName="EnableSessionChangeNotifications" />
+                <ScalarProperty Name="IsFavoritesVisible" ColumnName="IsFavoritesVisible" />
+                <ScalarProperty Name="IsRoomVisible" ColumnName="IsRoomVisible" />
+                <ScalarProperty Name="IsTimeslotVisible" ColumnName="IsTimeslotVisible" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Levels">
+            <EntityTypeMapping TypeName="MvcWebApp.Models.Level">
+              <MappingFragment StoreEntitySet="Levels">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ConferenceID" ColumnName="ConferenceID" />
+                <ScalarProperty Name="UKey" ColumnName="UKey" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Locations">
+            <EntityTypeMapping TypeName="MvcWebApp.Models.Location">
+              <MappingFragment StoreEntitySet="Locations">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ConferenceID" ColumnName="ConferenceID" />
+                <ScalarProperty Name="UKey" ColumnName="UKey" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+                <ScalarProperty Name="Building" ColumnName="Building" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Resources">
+            <EntityTypeMapping TypeName="MvcWebApp.Models.Resource">
+              <MappingFragment StoreEntitySet="Resources">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ConferenceID" ColumnName="ConferenceID" />
+                <ScalarProperty Name="ResourceType" ColumnName="ResourceType" />
+                <ScalarProperty Name="UKey" ColumnName="UKey" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sessions">
+            <EntityTypeMapping TypeName="MvcWebApp.Models.Session">
+              <MappingFragment StoreEntitySet="Sessions">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ConferenceID" ColumnName="ConferenceID" />
+                <ScalarProperty Name="UKey" ColumnName="UKey" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="TimeSlotID" ColumnName="TimeSlotID" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="LevelID" ColumnName="LevelID" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="IsSponsorSession" ColumnName="IsSponsorSession" />
+                <ScalarProperty Name="RequiresRegistration" ColumnName="RequiresRegistration" />
+                <ScalarProperty Name="RegistrationStartDate" ColumnName="RegistrationStartDate" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="SessionTypeID" ColumnName="SessionTypeID" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SessionTypes">
+            <EntityTypeMapping TypeName="MvcWebApp.Models.SessionType">
+              <MappingFragment StoreEntitySet="SessionTypes">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ConferenceID" ColumnName="ConferenceID" />
+                <ScalarProperty Name="UKey" ColumnName="UKey" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Speakers">
+            <EntityTypeMapping TypeName="MvcWebApp.Models.Speaker">
+              <MappingFragment StoreEntitySet="Speakers">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ConferenceID" ColumnName="ConferenceID" />
+                <ScalarProperty Name="UKey" ColumnName="UKey" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Bio" ColumnName="Bio" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Twitter" ColumnName="Twitter" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sponsors">
+            <EntityTypeMapping TypeName="MvcWebApp.Models.Sponsor">
+              <MappingFragment StoreEntitySet="Sponsors">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ConferenceID" ColumnName="ConferenceID" />
+                <ScalarProperty Name="UKey" ColumnName="UKey" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="LogoURL" ColumnName="LogoURL" />
+                <ScalarProperty Name="SponsorshipLevelID" ColumnName="SponsorshipLevelID" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="Twitter" ColumnName="Twitter" />
+                <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SponsorshipLevels">
+            <EntityTypeMapping TypeName="MvcWebApp.Models.SponsorshipLevel">
+              <MappingFragment StoreEntitySet="SponsorshipLevels">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ConferenceID" ColumnName="ConferenceID" />
+                <ScalarProperty Name="UKey" ColumnName="UKey" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Rank" ColumnName="Rank" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tags">
+            <EntityTypeMapping TypeName="MvcWebApp.Models.Tag">
+              <MappingFragment StoreEntitySet="Tags">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ConferenceID" ColumnName="ConferenceID" />
+                <ScalarProperty Name="UKey" ColumnName="UKey" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TimeSlots">
+            <EntityTypeMapping TypeName="MvcWebApp.Models.TimeSlot">
+              <MappingFragment StoreEntitySet="TimeSlots">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ConferenceID" ColumnName="ConferenceID" />
+                <ScalarProperty Name="UKey" ColumnName="UKey" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tracks">
+            <EntityTypeMapping TypeName="MvcWebApp.Models.Track">
+              <MappingFragment StoreEntitySet="Tracks">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ConferenceID" ColumnName="ConferenceID" />
+                <ScalarProperty Name="UKey" ColumnName="UKey" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vendors">
+            <EntityTypeMapping TypeName="MvcWebApp.Models.Vendor">
+              <MappingFragment StoreEntitySet="Vendors">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ConferenceID" ColumnName="ConferenceID" />
+                <ScalarProperty Name="UKey" ColumnName="UKey" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Booth" ColumnName="Booth" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="LogoURL" ColumnName="LogoURL" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="Twitter" ColumnName="Twitter" />
+                <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="SessionAudiences" TypeName="MvcWebApp.Models.SessionAudiences" StoreEntitySet="SessionAudiences">
+            <EndProperty Name="Audiences">
+              <ScalarProperty Name="ID" ColumnName="AudienceID" />
+            </EndProperty>
+            <EndProperty Name="Sessions">
+              <ScalarProperty Name="ID" ColumnName="SessionID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="SessionSpeakers" TypeName="MvcWebApp.Models.SessionSpeakers" StoreEntitySet="SessionSpeakers">
+            <EndProperty Name="Sessions">
+              <ScalarProperty Name="ID" ColumnName="SessionID" />
+            </EndProperty>
+            <EndProperty Name="Speakers">
+              <ScalarProperty Name="ID" ColumnName="SpeakerID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="SessionTags" TypeName="MvcWebApp.Models.SessionTags" StoreEntitySet="SessionTags">
+            <EndProperty Name="Sessions">
+              <ScalarProperty Name="ID" ColumnName="SessionID" />
+            </EndProperty>
+            <EndProperty Name="Tags">
+              <ScalarProperty Name="ID" ColumnName="TagID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="SessionTracks" TypeName="MvcWebApp.Models.SessionTracks" StoreEntitySet="SessionTracks">
+            <EndProperty Name="Sessions">
+              <ScalarProperty Name="ID" ColumnName="SessionID" />
+            </EndProperty>
+            <EndProperty Name="Tracks">
+              <ScalarProperty Name="ID" ColumnName="TrackID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
